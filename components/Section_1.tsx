@@ -5,10 +5,11 @@ const Section_1 = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <View style={styles.YellowColor}>
+        <View
+          style={[styles.YellowColor, styles.boxShadow, styles.boxElevation]}>
           <Text style={styles.BoxText}>Yellow Box</Text>
         </View>
-        <View style={styles.blueColor}>
+        <View style={[styles.blueColor, styles.boxShadow, styles.boxElevation]}>
           <Text style={styles.BoxText}>Blue Box</Text>
         </View>
       </View>
@@ -55,4 +56,15 @@ const styles = StyleSheet.create({
     height: 100,
     width: 100,
   },
+  boxShadow: {
+    elevation: 10,
+    shadowOffset: {
+      width: 8,
+      height: 8,
+    },
+    shadowColor: '#cd5c5c',
+    shadowOpacity: 0.6,
+    textShadowRadius: 3,
+  },
+  boxElevation: {},
 });
